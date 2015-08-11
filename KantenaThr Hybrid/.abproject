@@ -1,0 +1,48 @@
+{
+  "ProjectName": "KantenaThr Hybrid",
+  "ProjectGuid": "c5d17588-df4d-40ec-80a3-ecc1a3962224",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.KantenaThrHybrid",
+  "DisplayName": "KantenaThr Hybrid",
+  "Author": "",
+  "Description": "KantenaThr Hybrid",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{c9171a2d-9766-4b63-91f7-6870744a7138}",
+  "WP8ProductID": "{7c73ee70-7ada-4bb1-adf3-56133fd67e74}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.KantenaThrHybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "org.apache.cordova.network-information"
+  ]
+}
