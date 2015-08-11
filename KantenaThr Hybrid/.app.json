@@ -7,7 +7,7 @@
         {
           "type": "authentication",
           "name": "homeModel",
-          "dataProvider": "defaultProvider",
+          "dataProvider": "loginBs",
           "emailLabel": "Email",
           "passwordLabel": "Password",
           "signinLabel": "Sign In",
@@ -63,12 +63,12 @@
         {
           "type": "list",
           "name": "dataListViewModel",
-          "dataProvider": "kantenaThrBackend",
-          "collection": "Activities",
-          "imageField": "Likes",
-          "headerField": "Likes",
+          "dataProvider": "loginBs",
+          "collection": "dbo_Accounts",
+          "headerField": "Notes",
+          "subHeaderField": "Type",
           "masterDetails": true,
-          "detailHeaderField": "Likes",
+          "detailHeaderField": "UniqueID",
           "pullToRefresh": false,
           "endlessScroll": false
         }
@@ -96,6 +96,15 @@
       "title": "KantenaThr / KantenaThr Backend",
       "source": "everlive",
       "everliveKey": "sOG93mBBHZd1v49o",
+      "offlineStorage": true
+    },
+    {
+      "type": "dataProvider",
+      "everliveUrl": "//platform.telerik.com/bs-api/v1/",
+      "name": "loginBs",
+      "title": "KantenaThr / loginBS",
+      "source": "everlive",
+      "everliveKey": "AeswXxi2Uo68fGiq",
       "offlineStorage": true
     }
   ],

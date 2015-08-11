@@ -7,38 +7,22 @@ app.dataListView = kendo.observable({
 // START_CUSTOM_CODE_dataListView
 // END_CUSTOM_CODE_dataListView
 (function(parent) {
-    var dataProvider = app.data.kantenaThrBackend,
-        processImage = function(img) {
-            if (!img) {
-                var empty1x1png = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQI12NgYAAAAAMAASDVlMcAAAAASUVORK5CYII=';
-                img = 'data:image/png;base64,' + empty1x1png;
-            } else if (img.slice(0, 4) !== 'http' &&
-                img.slice(0, 2) !== '//' &&
-                img.slice(0, 5) !== 'data:') {
-                var setup = dataProvider.setup;
-                img = setup.scheme + ':' + setup.url + setup.apiKey + '/Files/' + img + '/Download';
-            }
-
-            return img;
-        },
-
+    var dataProvider = app.data.loginBs,
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Activities',
+                typeName: 'dbo_Accounts',
                 dataProvider: dataProvider
-            },
-            change: function(e) {
-                var data = this.data();
-                for (var i = 0; i < data.length; i++) {
-                    data[i]['LikesUrl'] = processImage(data[i]['Likes']);
-                }
             },
             schema: {
                 model: {
                     fields: {
-                        'Likes': {
-                            field: 'Likes',
+                        'Notes': {
+                            field: 'Notes',
+                            defaultValue: ''
+                        },
+                        'Type': {
+                            field: 'Type',
                             defaultValue: ''
                         },
                     }
@@ -54,8 +38,8 @@ app.dataListView = kendo.observable({
             detailsShow: function(e) {
                 var item = e.view.params.uid,
                     itemModel = dataSource.getByUid(item);
-                if (!itemModel.Likes) {
-                    itemModel.Likes = String.fromCharCode(160);
+                if (!itemModel.UniqueID) {
+                    itemModel.UniqueID = String.fromCharCode(160);
                 }
                 dataListViewModel.set('currentItem', itemModel);
             },

@@ -7,7 +7,7 @@ app.home = kendo.observable({
 // START_CUSTOM_CODE_home
 // END_CUSTOM_CODE_home
 (function(parent) {
-    var provider = app.data.defaultProvider,
+    var provider = app.data.loginBs,
         mode = 'signin',
         registerRedirect = 'home',
         signinRedirect = 'home',
