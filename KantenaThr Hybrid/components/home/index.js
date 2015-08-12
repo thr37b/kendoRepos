@@ -7,7 +7,7 @@ app.home = kendo.observable({
 // START_CUSTOM_CODE_home
 // END_CUSTOM_CODE_home
 (function(parent) {
-    var provider = app.data.loginBs,
+    var provider = app.data.progressDataProvider,
         mode = 'signin',
         registerRedirect = 'home',
         signinRedirect = 'home',
@@ -31,8 +31,7 @@ app.home = kendo.observable({
         successHandler = function(data) {
             var redirect = mode === 'signin' ? signinRedirect : registerRedirect;
 
-            if (data && data.result) {
-                app.user = data.result;
+            if (data) {
                 app.mobileApp.navigate('components/' + redirect + '/view.html');
             } else {
                 init();

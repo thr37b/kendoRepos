@@ -7,7 +7,7 @@
         {
           "type": "authentication",
           "name": "homeModel",
-          "dataProvider": "loginBs",
+          "dataProvider": "progressDataProvider",
           "emailLabel": "Email",
           "passwordLabel": "Password",
           "signinLabel": "Sign In",
@@ -77,6 +77,25 @@
       "title": "Data List",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "list",
+          "name": "dataListView1Model",
+          "dataProvider": "progressDataProvider",
+          "collection": "dbo_Accounts",
+          "headerField": "Id",
+          "masterDetails": true,
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "name": "dataListView1",
+      "title": "Data List",
+      "addToNavigation": true,
+      "icon": "organize"
     }
   ],
   "dataProviders": [
@@ -106,6 +125,15 @@
       "source": "everlive",
       "everliveKey": "AeswXxi2Uo68fGiq",
       "offlineStorage": true
+    },
+    {
+      "type": "dataProvider",
+      "name": "progressDataProvider",
+      "title": "Progress Data",
+      "source": "jsdo",
+      "url": "http://localhost:8980/POCService/rest/POCService/fund",
+      "catalogUrl": "http://localhost:8980/POCService/static/catalog/POCService.json",
+      "authentication": "anonymous"
     }
   ],
   "name": "kendoUiMobileApp",

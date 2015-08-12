@@ -1,0 +1,12 @@
+<div data-role="view" data-title="Data List" data-layout="main" data-model="app.dataListView1" data-show="app.dataListView1.onShow">
+    <!-- START_CUSTOM_CODE_dataListView1 -->
+    <!-- END_CUSTOM_CODE_dataListView1 -->
+    <ul data-role="listview" data-style="inset" data-template="dataListView1ModelTemplate" data-bind="{ source: dataListView1Model.dataSource, events: {click: dataListView1Model.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <script type="text/x-kendo-template" id="dataListView1ModelTemplate">
+        <div class="image-with-text">
+            <h3>#: data['Id'] #</h3>
+
+        </div>
+    </script>
+</div>
